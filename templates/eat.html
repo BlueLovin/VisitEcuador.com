@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <title>What to Eat While In Ecuador?</title>
+    <script src="{{ url_for('static', filename='files/tabs.js') }}" defer></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="home" class="logo"><img src="{{ url_for('static', filename='/files/flag.jpg') }}" class="logo"></a>
+            <li><a href="see">Places To See</a></li>
+            <li><a href="stay">Where To Stay</a></li>
+            <li><a href="eat">What To Eat</a></li>
+        </ul>
+    </nav>
+    <br>
+    <ul class="tabs">
+        <li data-tab-target="#coast" class="tab">Coastal Food</li>
+        <li data-tab-target="#Mountains" class="tab">Mountain Food</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="coast" data-tab-content class="active">
+            <h1>Costa (Coastal Food)</h2>
+
+
+            <img src="{{ url_for('static', filename='/files/gross_stew.jpg') }}">
+
+            <h3>Encebollado (Fish Stew)</h3>
+            <h4>This fish based soup is regarded as a national delicacy.
+                It is based with local coast ingredients. If you ask any
+                local ecuadorian, they will tell you that this is their
+                favorite hangover cure, if not their favorite dish period.
+            </h4>
+            <br><br><hr><br><br>
+            <img src="{{ url_for('static', filename='/files/bolon.jpg') }}">
+            <h3>Bolon</h3>
+            <h4>This is the most famous breakfast from the coastal area 
+                of Ecuador. It has three basic ingredients: plantain, 
+                cheese, and Ecuador's famous chicharron. It goes great
+                with freshly squeezed orange juice after a long night 
+                out on the town.
+            </h4>
+            <br><br><hr><br><br>
+            <img src="{{ url_for('static', filename='/files/pan.jpg') }}">
+            <h3>Pan de Yuca</h3>
+            <h4>Ecuadorian pan de yuca are small cheesy breads made with
+                yuca flour. Yuca bread makes a delicious warm appetizer 
+                and the breads can be made in advance and baked minutes 
+                before serving.
+            </h4>
+            <br><br><hr><br><br>
+            <img src="{{ url_for('static', filename='/files/seco-de-pollo.png') }}">
+            <h3>Seco de Pollo</h3>
+            <h4>Seco is a popular Ecuadorian meat stew. This delicious
+                meal is always eaten with orange rice. 
+            </h4>
+        </div>
+        <div id="Mountains" data-tab-content>
+            <h1>Mountain Food</h1>
+            <!-- cuy, locro, fanesca, gua guas de pan (kid shaped bread), mote pillo, llapigachos -->
+
+
+            <img src="{{ url_for('static', filename='/files/cuy.jpg') }}">
+            <h3>Cuy (Guinea Pig)</h3>
+            <h4>It may be strange to an american, but this is arguably 
+                the most popular meal in Ecuador. Usually accompanied by
+                potatoes and a salad. 
+            </h4>
+            <br><br><hr><br><br>
+            <img src="{{ url_for('static', filename='/files/locro.jpg') }}">
+            <h3>Locro</h3>
+            <h4>A potato-based soup accompanied by squash, beans, corn, and pumpkin.
+                 Pictured above with green onions on top.
+            </h4>
+            <br><br><hr><br><br>
+            <img src="{{ url_for('static', filename='/files/llapingachos.jpg') }}">
+            <h3>llapingachos</h3>
+            <h4>These are fried potato pancakes that are usually served with a 
+                peanut sauce.
+            </h4>
+        </div>
+    </div>
+</body>
+</html>

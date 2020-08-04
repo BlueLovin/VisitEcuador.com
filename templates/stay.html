@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Stay</title>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="home" class="logo"><img src="{{ url_for('static', filename='/files/flag.jpg') }}" class="logo"></a>
+            <li><a href="see">Places To See</a></li>
+            <li><a href="stay">Where To Stay</a></li>
+            <li><a href="eat">What To Eat</a></li>
+        </ul>
+    </nav>
+    <br><br>
+    <h1>Where to stay</h1>
+    <br><br>
+    <p>Everything is cheaper in Ecuador, especially the luxury hotels! 
+        You can live the high life for a hundred bucks a night here.
+        Book a room today!
+    </p>    <br><br>
+
+    <div class="bigrow">
+        <div class="display">
+            <img src="{{url_for('static', filename='/files/hotels/samari.jpg')}}" alt="">
+            <div class="nameanddesc">
+                <br><br><p>Luxury Hotel 1</p><br><br>
+                <h3>description</p>
+            </div>
+            <p>$100/night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <div class="littlerow">
+        <img src="{{url_for('static', filename='/files/hotels/samari.jpg')}}" alt="">
+        <br><br><p>Luxury Hotel 1</p><br><br>
+        <p>$100/night</p>
+        <br><button>Book Now</button>
+    </div>
+
+    <br><br>
+
+    <div class="bigrow">
+        <div class="display">
+            <img src="{{url_for('static', filename='/files/hotels/Solymar-1.webp')}}" alt="">
+            <div class="nameanddesc">
+                <br><br><p>Luxury Hotel 2</p><br><br>
+                <h3>description</p>
+            </div>
+            <p>$98/night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <div class="littlerow">
+        <img src="{{url_for('static', filename='/files/hotels/Solymar-1.webp')}}" alt="">
+        <br><br><p>Luxury Hotel 2</p><br><br>
+        <p>$98/night</p>
+        <br><button>Book Now</button>
+    </div>
+    
+    <br><br>
+
+    <div class="bigrow">
+        <div class="display">
+            <img src="{{url_for('static', filename='/files/hotels/Habitat-1.webp')}}" alt="">
+            <div class="nameanddesc">
+                <br><br><p>Luxury Hotel 3</p><br><br>
+                <h3>description</p>
+            </div>
+            <p>$125/night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <div class="littlerow">
+        <img src="{{url_for('static', filename='files/hotels/Habitat-1.webp')}}" alt="">
+        <br><br><p>Luxury Hotel 3</p><br><br>
+        <p>$125/night</p>
+        <br><button>Book Now</button>
+    </div>
+    
+    <br><br>
+
+    <div class="bigrow">
+        <div class="display">
+            <img src="{{url_for('static', filename='files/hotels/unnamed.jpg')}}" alt="">
+            <div class="nameanddesc">
+                <br><br><p>Luxury Hotel 4</p><br><br>
+                <h3>description</p>
+            </div>
+            <p>$184/night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <div class="littlerow">
+        <img src="{{url_for('static', filename='/files/hotels/unnamed.jpg')}}" alt="">
+        <br><br><p>Luxury Hotel 4</p><br><br>
+        <p>$184/night</p>
+        <br><button>Book Now</button>
+    </div>
+
+
+
+    <br><br>
+    <br><br>
+
+</body>
+</html>

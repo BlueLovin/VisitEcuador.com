@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Fly</title>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="home" class="logo"><img src="{{ url_for('static', filename='/files/flag.jpg') }}" class="logo"></a>
+            <li><a href="see">Places To See</a></li>
+            <li><a href="stay">Where To Stay</a></li>
+            <li><a href="eat">What To Eat</a></li>
+            <li><a href="fly">Book Your Flight!</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

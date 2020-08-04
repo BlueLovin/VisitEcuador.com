@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visit Ecuador!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="#" class="logo"><img src="{{ url_for('static', filename='/files/flag.jpg') }}" class="logo"></a>
+            <li><a href="see">Places To See</a></li>
+            <li><a href="stay">Where To Stay</a></li>
+            <li><a href="eat">What To Eat</a></li>
+        </ul>
+    </nav>
+    <h1>DISCOVER ECUADOR!</h1>
+    <div class="containercontainer">
+    <div class="headcontainer">
+    <h2>Come visit the most beautiful country in the world!</h1>
+    </div>
+    </div>
+    <div class="slideshow-container">
+
+        <!--images-->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="{{ url_for('static', filename='files/image1.jpg') }}" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="{{ url_for('static', filename='files/image2.jpg') }}" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="{{ url_for('static', filename='files/image3.jpg') }}" style="width:100%">
+        </div>
+      
+        <!--buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!--dots-->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    
+</body>
+<br><br>
+<form action="" method="POST" autocomplete="off" >
+    <label for="Name">Name:</label>
+    <input type="text" name="form_name" min="5" maxlength="25">
+    {% if error %}
+    <h1>Error!</h1>
+    {% endif %}<br>
+    <label for="Comment">Comment:</label>
+    <textarea class = "text-align" type="text" name="form_comment" minlength="5" maxlength="1000"></textarea><br>
+    <input type="submit" value="submit" class="submitbutton"></input>
+  </form> 
+  <br><br>
+{% for comment in comments %}
+<div class="commentcontainer">
+<h3>{{comment.name}}</h3>
+<h4>{{comment.comment}}</h4>
+<form action="{{url_for('delComment', commentid=comment.id)}}" method="POST">
+  <input type=submit value="Delete">
+</form>
+</div>
+<hr>
+{% endfor %}
+<script src="{{ url_for('static', filename='files/slideshow.js') }}"></script>
+<br>
+</html>

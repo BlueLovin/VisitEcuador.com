@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Where to stay</title>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="home" class="logo"><img src="{{ url_for('static', filename='/files/flag.jpg') }}" class="logo"></a>
+            <li><a href="see">Places To See</a></li>
+            <li><a href="stay">Where To Stay</a></li>
+            <li><a href="eat">What To Eat</a></li>
+        </ul>
+    </nav>
+    <br><br>
+
+    <h1>Sights to See In Ecuador</h1><hr>
+    <img src="{{ url_for('static', filename='/files/middleofworld.jpg') }}">
+    <img src="{{ url_for('static', filename='/files/equator_line.jpg') }}">
+
+    <h3>Middle Of The World</h3>
+    <h4>The Ciudad Mitad del Mundo is a tract of land owned by 
+        the prefecture of the province of Pichincha, Ecuador. 
+        It is located at San Antonio parish of the canton of 
+        Quito, 26 km north of the center of Quito. (from wikipedia)
+    </h4>
+    <br><br><hr><br><br>
+    <img src="{{ url_for('static', filename='/files/Quilotoa.jpg') }}">
+    <img src="{{ url_for('static', filename='/files/Quilotoa-llama.jpg') }}" style="height: 500px; width: auto;">
+    <h3>Quilotoa</h3>
+    <h4>Quilotoa is a water-filled caldera and the most western 
+        volcano in the Ecuadorian Andes. (from wikipedia)
+    </h4>
+    <br><br><hr><br><br>
+    <img src="{{ url_for('static', filename='/files/Coto-Glacier.jpg') }}">
+    <img src="{{ url_for('static', filename='/files/coto.jpg') }}"style="height: 500px;">
+    <h3>Cotopaxi</h3>
+    <h4>Cotopaxi is an active stratovolcano in the Andes Mountains. 
+        It is the second highest summit in Ecuador, reaching a height 
+        of 5,897 m. It is one of the world's highest volcanoes.
+         (from wikipedia)
+    </h4>
+    <br><br>
+</body>
+</html>
